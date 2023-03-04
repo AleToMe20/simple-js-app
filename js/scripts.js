@@ -1,6 +1,6 @@
-// push notification
-alert('Hello world');
 
-// assigning favoriteFood as pasta
-let favoriteFood = 'Pasta';
-document.write(favoriteFood);
+// assigning three pokemon Objects to pokemonList array 
+let pokemonList = [
+// defining three pokemon objects
+{name: 'Bulbasaur', height: 7, types: ['grass', 'poison']},
+];
