@@ -18,10 +18,11 @@ let pokemonList = [
         types: ['grass', 'poison']
     }
 ]
-for (let i = 0; i < pokemonList.length; i++) {
-    document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")");
 
-    if (pokemonList[i].height >= 1.5) {
-        document.write(" Wow, that's big!!") + "</p>"
-    }
-}
+    pokemonList.forEach(function(pokemon){
+        if (pokemonList.height >= 1.5) {
+            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Wow, that is a big Pokemon!!" + "<p>")
+        } else {
+            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Wow, that is a small Pokemon!!" + "<p>")
+        }
+    });
