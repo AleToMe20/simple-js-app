@@ -32,14 +32,12 @@ let pokemonRepository = (function () {
     };
 })();
 
-function printArrayDetails(i) {
-    if (i.height > 0.6) {
-        document.write(i.name + ' (height: ' + i.height + ')' + " - Wow, that's big!" + '<br>')
+function printArrayDetails(pokemon) {
+    if (pokemon.height > 1) {
+        document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + " - Wow, that's big!" + '<br>')
     }
     else {
         document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + '<br>')
-        document.write(i.name + ' (height: ' + i.height + ')' + '<br>')
     }
 };
-repository.forEach(printArrayDetails);
 pokemonRepository.getAll().forEach(printArrayDetails);
