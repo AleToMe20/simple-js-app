@@ -1,12 +1,10 @@
 // assigning three pokemon Objects to pokemonList array 
 let pokemonRepository = (function () {
-    let pokemonList = [// empty array
-        // defining three pokemon objects
+    let pokemonList = [
         {
             name: 'Bulbasaur',
             height: 0.7,
-            types: ['grass', 'poison'
-            ]
+            types: ['grass', 'poison']
         },
         {
             name: 'Ivysaur',
@@ -17,26 +15,31 @@ let pokemonRepository = (function () {
             name: 'Venusaur',
             height: 2,
             types: ['grass', 'poison']
-        }
-    ];
-    return {
-        add: function (pokemon) {
-            pokemonList.push(pokemon);
         },
+    ];
 
-        getAll: function () {
-            return pokemonList;
-        }
-    };
-    pokemonList.forEach(function (pokemon) {
-        if (pokemonList.height >= 1.5) {
-            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Wow, that is a big Pokemon!!" + "<p>")
-        } else {
-            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Wow, that is a small Pokemon!!" + "<p>")
-        }
+    function add(pokemon) {
+        pokemonList.push(pokemon);
     }
-    );
+
+    function getAll() {
+        return pokemonList;
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    };
 })();
-pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write(pokemon.name + pokemon.height);
-});
+
+function printArrayDetails(i) {
+    if (i.height > 0.6) {
+        document.write(i.name + ' (height: ' + i.height + ')' + " - Wow, that's big!" + '<br>')
+    }
+    else {
+        document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + '<br>')
+        document.write(i.name + ' (height: ' + i.height + ')' + '<br>')
+    }
+};
+repository.forEach(printArrayDetails);
+pokemonRepository.getAll().forEach(printArrayDetails);
