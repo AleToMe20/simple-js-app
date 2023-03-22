@@ -1,3 +1,7 @@
+.main {
+    background-color: aqua;
+}
+
 .pokemon-button {
     background-color: #dd2156;
     border: black;
@@ -11,3 +15,8 @@
     cursor:pointer;
     transition-duration: 0.4s;
 }
+ul.pokemon-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
